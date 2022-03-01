@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/domemarket.css" />
+    <script type="text/javascript" src="../assignment5/assignment.js"></script>
 </head>
 
 <body>
@@ -23,48 +24,48 @@
         </div>
     </div>
 
-    <form action="./success.html" method="get">
+    <form method="post">
         <div class="container">
             <h3>New Product Form</h3>
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
                         <label class="form-label">Product Number</label>
-                        <input class="form-control" type="text" name="pNumber" />
+                        <input class="form-control" id="product_number" type="text" name="pNumber" />
                     </div>
                     <div class="form-group">
                         <label class="form-label">Name</label>
-                        <input class="form-control" type="text" name="Name" />
+                        <input class="form-control" type="text" name="Name" id="name" />
                     </div>
                     <div class="form-group">
                         <label class="form-label">Unit Price</label>
-                        <input class="form-control" type="text" name="price" placeholder="0.0" />
+                        <input class="form-control" type="text" name="price" id="price" placeholder="0.0" />
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group">
                         <label class="form-label">Quantity in Stock</label>
-                        <input class="form-control" type="text" name="stock" placeholder="0" />
+                        <input class="form-control" type="text" name="stock" id="stock" placeholder="0" />
                     </div>
                     <div class="form-group">
                         <label class="form-label">Supplier:</label>
-                        <select class="form-control" name="supplier">
-                            <option selected>Select a Supplier</option>
-                            <option>Supplier2</option>
-                            <option>Supplier3</option>
+                        <select class="form-control" name="supplier" id="supplier">
+                            <option selected value="">Select a Supplier</option>
+                            <option value="supplier2">Supplier2</option>
+                            <option value="supplier3">Supplier3</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Date Supplied</label>
-                        <input class="form-control" type="text" name="date" placeholder="yyyy-mm-dd" />
+                        <input class="form-control" value="date" type="date" id="date" name="date" placeholder="yyyy-mm-dd" />
                         <span class="text-secondary">Enter a valid Date.</span>
                     </div>
                     <div class="buttons">
-                        <button class="btn btn-outline-primary" type="reset">
+                        <button class="btn btn-outline-primary">
                             Reset
                         </button>
                         <button class="btn btn-outline-danger">Cancel</button>
-                        <button class="btn btn-outline-info" type="submit">
+                        <button class="btn btn-outline-info" onclick="validTHISForm()">
                             Add Product
                         </button>
                     </div>

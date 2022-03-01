@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assignment.js" type="text/javascript"></script>
+    <title>Ticker Clock</title>
+    <style>
+        body{
+            background-color: black;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: large;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <span id="span"></span>
+<script>
+    var span = document.getElementById('span');
+
+        function time() {
+            var d = new Date();
+            span.textContent =d;
+        }
+        setInterval(time, 1000);
+</script>
+</body>
+</html>
