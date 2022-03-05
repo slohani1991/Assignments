@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        fieldset {
+            width: 500px;
+            padding: 20px;
+            margin: 10px;
+        }
+        input{
+            margin: 5px 0px 0px 0px;
+            width: 200px;
+            height: 30px;
+            display: block;
+        }
+        .input-radio{
+            display: inline-block;
+            height: 10px !important;
+            margin: 0px !important;
+            width: 25px;
+        }
+        input.submit{
+            float: right;
+            margin-right: 5px;
+        }
+        div{
+            width: 560px;
+        }
+    </style>
+</head>
+<body>
+    
+<div>
+    <form>
+        <fieldset>
+            <legend>Bio Data</legend>
+            <label for="name">Full Names*</label>
+            <input type="text" id="name" name="name" placeholder="Enter Full Name"> <br/>
+            <label for="dob">Date of birth*</label>
+            <input type="date" id="dob" name="fob">
+        </fieldset>
+        <fieldset>
+            <legend>Academic Enrollement</legend>
+            <label for="studentID">Student ID*</label>
+            <input type="text" id="studentID" name="studentID" placeholder="000-XX-XXXX"> <br />
+            <label for="los">Level of Study*</label>
+            <input class="input-radio" type="radio" name="los" value="graduate">Graduate
+            <input class="input-radio" type="radio" name="los" value="undergraduate">Undergraduate
+        </fieldset>
+        <input type="submit" class="submit" value="Submit" style="display: inline-block;">
+        <input type="Reset" class="submit" value="Reset" style="display: inline-block;">
+    </form>
+
+</div>
+</body>
+</html>

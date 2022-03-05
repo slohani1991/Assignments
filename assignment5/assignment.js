@@ -1,10 +1,10 @@
-function calculateMax(x, y) {
+const calculateMax = (x, y) => {
   if (x > y) {
     return x;
   }
   return y;
-}
-function calculateMaxOfThree(x, y, z) {
+};
+const calculateMaxOfThree = (x, y, z) => {
   if (x > y && x > z) {
     return x;
   } else if (y > x && y > z) {
@@ -12,43 +12,21 @@ function calculateMaxOfThree(x, y, z) {
   } else {
     return z;
   }
-}
-function isVowel(x) {
-  const vowel = ["a", "e", "i", "o", "u"];
-  let flag = false;
-  vowel.forEach((data) => {
-    if (data === x) {
-      flag = true;
-    }
-  });
-  return flag;
-}
+};
+const isVowel = (x) =>
+  ["a", "e", "i", "o", "u"].filter((data) => data.startsWith(x).length);
 
-function sum() {
-  const data = [1, 2, 3, 4];
-  let sum = 0;
-  data.forEach((value) => {
-    sum += value;
-  });
-  return sum;
-}
-function multiply() {
-  const data = [1, 2, 3, 4];
-  let mul = 1;
-  data.forEach((value) => {
-    mul *= value;
-  });
-  return mul;
-}
+const sum = () => [1, 2, 3, 4].reduce((a, b) => a + b, 0);
+const multiply = () => [1, 2, 3, 4].reduce((a, b) => a * b, 1);
 
-function reverseData(str) {
+const reverseData = (str) => {
   let string = "";
   for (i = str.length - 1; i >= 0; i--) {
     string += str[i];
   }
   return string;
-}
-function longestWord(arr) {
+};
+const longestWord = (arr) => {
   max = arr[0];
   arr.forEach((data) => {
     if (data.length > max.length) {
@@ -56,69 +34,33 @@ function longestWord(arr) {
     }
   });
   return max;
-}
-
-function longestWordThanIndex(arr, index) {
-  let newArrayData = [];
-  arr.forEach((data) => {
-    if (data.length > index) {
-      newArrayData.push(data);
-    }
-  });
-  return newArrayData;
-}
-
-const computeSumOfSquares = (arryaData) => {
-  let sum = 0;
-  arryaData.forEach((data) => {
-    sum += data * data;
-  });
-  return sum;
 };
 
-const printOddNumbersOnly = (arryaData) => {
-  let newArrayData = [];
-  arryaData.forEach((data) => {
-    if (data % 2 != 0) {
-      newArrayData.push(data);
-    }
-  });
-  return newArrayData;
-};
+const longestWordThanIndex = (arr, index) =>
+  arr.filter((data) => data.length > index);
 
-const computeSumOfSquaresOfEvensOnly = (arryaData) => {
-  let sum = 0;
-  arryaData.forEach((data) => {
-    if (data % 2 == 0) {
-      sum += data * data;
-    }
-  });
-  return sum;
-};
+const computeSumOfSquares = (arryaData) =>
+  arryaData.map((a) => a * a).reduce((a, b) => a + b, 0);
 
-const sumUsingReduce = (arryaData) => {
-  let ini = 0;
-  let sum = arryaData.reduce(
-    (prevData, currentData) => prevData + currentData,
-    ini
+const printOddNumbersOnly = (arryaData) => arryaData.filter((a) => a % 2 != 0);
+
+const computeSumOfSquaresOfEvensOnly = (arryaData) =>
+  arryaData
+    .filter((a) => a % 2 == 0)
+    .map((data) => data * data)
+    .reduce((a, b) => a + b, 0);
+
+const sumUsingReduce = (arryaData) =>
+  arryaData.reduce((prevData, currentData) => prevData + currentData, 0);
+
+const mulUsingReduce = (arryaData) =>
+  arryaData.reduce((prevData, currentData) => prevData * currentData, 1);
+
+const findSecondBiggest = (arryaData) =>
+  Math.max.apply(
+    null,
+    arryaData.splice(arryaData.indexOf(Math.max.apply(null, arryaData)), 1)
   );
-  return sum;
-};
-
-const mulUsingReduce = (arryaData) => {
-  let ini = 1;
-  let mul = arryaData.reduce(
-    (prevData, currentData) => prevData * currentData,
-    ini
-  );
-  return mul;
-};
-
-const findSecondBiggest = (arryaData) => {
-  var max = Math.max.apply(null, arryaData);
-  arryaData.splice(arryaData.indexOf(max), 1);
-  return Math.max.apply(null, arryaData);
-};
 
 const fibonacci = (n, a, b) => {
   let newArrayData = [];
@@ -156,7 +98,7 @@ const validLogin = () => {
   }
 };
 
-function validTHISForm() {
+const validTHISForm = () => {
   var product_num = document.getElementById("product_number").value;
   var name = document.getElementById("name").value;
   var price = document.getElementById("price").value;
@@ -196,4 +138,6 @@ function validTHISForm() {
         "</p>"
     );
   }
-}
+};
+
+const ObjectSum = () => Object.values(arguments).reduce((a, b) => a + b);
