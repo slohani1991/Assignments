@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The South West-Regional Census</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styleSheet.css" />
+    <script src="./js/script.js"></script>
+  </head>
+
+  <body>
+    <div class="top">
+      <a href="#" class="navbar-brand border-end pe-4"
+        >The South West-Regional Census</a
+      >
+      <a href="index.html" class="navbar-brand border-end pe-4">Home </a>
+      <a href="census-form.html" class="navbar-brand border-end pe-4"
+        >Census Form</a
+      >
+      <div class="toptext">
+        <span class="">Saturday , 5 March 2022 - 10:21:37 AM</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <form method="post" onsubmit="onFormSubmitValidData()">
+        <h2>Census Form</h2>
+        <hr />
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label class="form-label">*Full Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your Full Name"
+                required="required"
+              />
+              <small class="form-small"
+                >Enter Full Name as printed on your Government-issued ID</small
+              >
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label class="form-label">*Citizen ID:</label>
+              <input
+                class="form-control"
+                id="citizenID"
+                type="text"
+                name="citizenID"
+                placeholder="XXXXXXXXXX"
+                pattern="[0-9]{10}"
+                required
+              />
+              <small class="form-small">Enter your 10 Digit Citizen ID</small>
+            </div>
+            <div class="form-group">
+              <label class="form-label">*State</label>
+              <select name="state" id="state" class="form-control">
+                <option value="">Select..</option>
+                <option value="South West region-Arizona">
+                  South West region-Arizona
+                </option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="Texas">Texas</option>
+              </select>
+              <small class="form-small">Select your state of residence</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label class="form-label">*Social Security Number:</label>
+              <input
+                class="form-control"
+                id="ssn"
+                type="text"
+                name="ssn"
+                placeholder="XXX-XX-XXXX"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}"
+                required
+              />
+              <small class="form-small"
+                >Enter your Social Security Number(in the format shown)</small
+              >
+            </div>
+            <div class="form-group">
+              <label class="form-label">*Senior Citizen</label><br />
+              <input
+                type="radio"
+                class="input-radio"
+                name="sc"
+                value="Yes"
+                id="sc"
+              />Yes
+              <input
+                type="radio"
+                class="input-radio"
+                name="sc"
+                id="sc"
+                value="No"
+              />No
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group form-button">
+              <input type="reset" class="btn btn-secondary" value="Reset" />
+              <input
+                type="submit"
+                class="btn btn-form"
+                value="Register Patient"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer class="footer">
+      <p>
+        [Sandesh Lohani]:::CS472-WAP
+        <span class="right">&copy; March 2022</span>
+      </p>
+    </footer>
+  </body>
+</html>
