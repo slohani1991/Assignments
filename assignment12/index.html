@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <form action="http://localhost:8080/process" method="POST">
+          <div class="form-group row">
+            <label for="staticEmail" class="col-form-label"
+              >FIRST NUMBER
+            </label>
+            <div class="col-sm-10">
+              <input type="number" name="first_number" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-form-label"
+              >Second NUMBER</label
+            >
+            <div class="col-sm-10">
+              <input type="number" name="second_number" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-form-label"
+              >SELECT OPERATION</label
+            >
+            <div class="col-sm-10">
+              <select name="operation" class="form-control">
+                <option value="+">Sum</option>
+                <option value="-">Subtract</option>
+                <option value="/">Division</option>
+                <option value="*">Multiplication</option>
+              </select>
+            </div>
+          </div>
+          <input type="submit" value="Submit" class="btn btn-success" />
+          <input type="reset" value="Reset" class="btn btn-danger" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

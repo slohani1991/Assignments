@@ -1,0 +1,11 @@
+{
+  "name": "nodeii",
+  "version": "1.0.0",
+  "description": "aa",
+  "main": "index.js",
+  "scripts": {
+    "test": "aa"
+  },
+  "author": "",
+  "license": "ISC"
+}
